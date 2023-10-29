@@ -8,9 +8,18 @@ namespace SzuperhosProjekt
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static void Main(string[] args)              //Main függvény
         {
-            Console.WriteLine("Hello World!");
+			try
+			{
+                Kepregeny.Szereplok("files/szuperhosok.txt");
+                Kepregeny.Szuperhosok();
+            }
+			catch (Exception exception)
+			{
+
+				Console.WriteLine(exception.Message);
+			}
         }
     }
 }
